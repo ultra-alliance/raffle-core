@@ -1,8 +1,4 @@
-import {
-  RaffleDataTypes,
-  RaffleService,
-  RaffleContractNames,
-} from "../typegen";
+import { RaffleService, DataTypes, ContractNames } from "../typegen";
 import config from "../ultradev.config";
 const { signer: alice } = config.network;
 
@@ -10,10 +6,10 @@ const { signer: alice } = config.network;
   const raffle = new RaffleService({
     rpcEndpoint: config.network.rpcEndpoint,
     signer: alice,
-    name: RaffleContractNames.ACCOUNT,
+    name: ContractNames.ACCOUNT,
   });
 
-  const RAFFLE_CREATION_PARAMS: RaffleDataTypes.CreateStruct = {
+  const RAFFLE_CREATION_PARAMS: DataTypes.CreateStruct = {
     influencer: alice.name,
     reward_amount: "100.00000000 UOS",
   };

@@ -22,9 +22,15 @@
 
 # Raffle Core
 
-This repository cinp
+This repository houses the core smart contracts for the Ultra Raffle.
 
 ## Testing
+
+You will need to install the `ultradev` cli via `npm`, however this package is still in development:
+
+```shell
+    npm install -g @ultra-alliance/ultradev
+```
 
 Create the following `.env` file:
 
@@ -38,5 +44,4 @@ Try running some of the following tasks:
 ```shell
     npx ultradev help
     npx ultradev test
-    npx ultradev run scripts/sign.ts
 ```
